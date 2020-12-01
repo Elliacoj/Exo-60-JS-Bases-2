@@ -2,18 +2,27 @@
 
 <html lang="fr">
 <head>
-<title>Essai DHTML</title>
-<meta charset="UTF-8">
-<script>
-	
-	function change_liste()
-		{
+	<title>Essai DHTML</title>
+	<meta charset="UTF-8">
+	<script>
 
-			
-		
+		function change_liste()
+		{
+			let nombre = 0;
+			let objet = document.getElementsByTagName("ul");
+			let collection = document.getElementsByTagName("li");
+
+			while ((0 < objet.length)) {
+				objet[nombre].setAttribute("type", "button");
+				while (0 < collection.length) {
+					collection[nombre].innerHTML = "blabla";
+					nombre++;
+				}
+				nombre++;
+			}
 		}
-	
-</script>
+
+	</script>
 
 </head>
 <body onclick="change_liste()">
@@ -26,7 +35,7 @@
 	<li>e</li>
 	<li>f</li>
 	<li>g</li>
-	<li>h</li>	
+	<li>h</li>
 </ul>
 
 </body>
